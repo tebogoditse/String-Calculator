@@ -1,7 +1,6 @@
 function add(str) {
 
     var find = /-?[0-9]+/g;
-    var negative = []
     var convert = str.match(find).map(function(n){
     if (n > 1000){
       return (0);
