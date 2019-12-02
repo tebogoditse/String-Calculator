@@ -1,4 +1,21 @@
+var findNeg = /[-]/g;
+errorFunc = num => {
+  var test = findNeg.test(num); //boolean
+  if (!test) {
+    return "Great!";
+  } else {
+    return "negatives not allowed";
+  }
+};
+
 describe("A function", function() {
+  it("should throw an error for negative numbers", () => {
+ var err = errorFunc("-35");
+   var jasmineError = () => {
+     throw err;
+   };
+   expect(jasmineError).toThrow("negatives not allowed");
+ });
 
   it("If the string is empty, it should return 0", function() {
     expect(add("")).toBe(0);
