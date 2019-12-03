@@ -1,3 +1,5 @@
+const add = require("../src/string_calculator.js"); 
+
 var findNeg = /[-]/g;
 errorFunc = num => {
   var test = findNeg.test(num); //boolean
